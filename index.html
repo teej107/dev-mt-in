@@ -24,11 +24,11 @@
     <div id="initView-left">
         <h4>Welcome to <a>DevMountain</a> Social</h4>
         <h4>Add Some Info So Friends Can Find You</h4>
-        <input id="initView-name" placeholder="Full Name">
-        <input id="initView-tagline" placeholder="Tagline">
-        <input id="initView-profileimg" placeholder="Profile Image Url">
-        <input id="initView-bio" placeholder="Bio">
-        <button id="initView-save">Save Changes</button>
+        <input ng-model="name" placeholder="Full Name">
+        <input ng-model="tagline" placeholder="Tagline">
+        <input ng-model="profileUrl" placeholder="Profile Image Url">
+        <input ng-model="bio" placeholder="Bio">
+        <button id="initView-save" ng-click="createUser()">Save Changes</button>
     </div>
     <div id="initView-right">
         <img src="images/TextStyles.jpg">
@@ -40,12 +40,17 @@
 <div id="findView" ng-show="currentView === 'findView'">
     <p>Find</p>
 </div>
+<div id="landingView" ng-show="currentView ==='landingView'">
+    <h1>{{ name }}</h1>
+    <h4>{{ tagline }}</h4>
+    <p>{{ bio }}</p>
+</div>
 <footer>
     <hr>
     <div id="footer-div">
-        <a href="" ng-click="switchView($event, 'friendsView')">View Friends</a>
-        <a href="" ng-click="switchView($event, 'findView')">Find Friends</a>
-        <a href="" ng-click="switchView($event, 'initView')">Update Profile</a>
+        <a href="" ng-click="switchView($event.target, 'friendsView')">View Friends</a>
+        <a href="" ng-click="switchView($event.target, 'findView')">Find Friends</a>
+        <a href="" ng-click="switchView($event.target, 'initView')">Update Profile</a>
     </div>
 </footer>
 </body>

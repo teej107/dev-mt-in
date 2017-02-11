@@ -1,7 +1,7 @@
 app.controller('mainController', function ($scope)
 {
     $scope.currentView = "initView";
-    $scope.switchView = function ($event ,view)
+    $scope.switchView = function (element ,view)
     {
         $scope.currentView = view;
         var aTags = document.getElementById('footer-div').getElementsByTagName('a');
@@ -9,6 +9,27 @@ app.controller('mainController', function ($scope)
         {
             aTags[i].style.textDecoration = "none";
         }
-        $event.target.style.textDecoration = "underline";
+        if(element instanceof HTMLAnchorElement)
+        {
+            element.style.textDecoration = "underline";
+        }
     }
+
+    $scope.createUser = function ()
+    {
+        if(!isWhitespace($scope.name, $scope.tagline, $scope.bio))
+        {
+            $scope.switchView(null, 'landingView');
+        }
+    };
 });
+
+function isWhitespace()
+{
+    for(var i = 0; i < arguments.length; i++)
+    {
+        if(arguments[i].trim().length === 0)
+            return true;
+    }
+    return false;
+}
