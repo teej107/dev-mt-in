@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="devmtnin">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevMtin</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
     <script src="js/config.js"></script>
 </head>
 
-<body>
+<body ng-controller="mainController">
+<header>
+    <div id="header-div">
+        <img src="images/Icons/Search.svg">
+        <h3>Dev Mountain</h3>
+        <img src="images/Icons/Ham.svg">
+    </div>
+</header>
 <ng-view>
-
 </ng-view>
+<footer>
+    <div id="footer-div">
+        <a>View Friends</a>
+        <a>Find Friends</a>
+        <a>Update Profile</a>
+    </div>
+</footer>
 </body>
 </html>

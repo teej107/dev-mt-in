@@ -1,4 +1,4 @@
 /**
  * Created by tanner on 2/9/17.
  */
-angular.module("devmtnin", ['ngRoute']);
+angular.module('devmtnin', ['ngRoute']);
