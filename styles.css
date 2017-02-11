@@ -1,24 +1,40 @@
-h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5, a, p, input
 {
-    font-family: Lora-Regular;
+    font-family: Arial;
 }
 
 html
 {
     width: 100%;
+    height: 100%;
 }
 
 body
 {
-    width: 80%;
+    width: 60%;
+    height: calc(100% - 80px);
     margin: 0 auto;
-    border: 2px solid red;
 }
 
 #header-div
 {
     display: flex;
     justify-content: space-between;
+}
+
+footer
+{
+    position: fixed;
+    bottom: 0;
+    width: inherit;
+    height: 80px;
+    margin: inherit;
+    background-color: white;
+}
+
+footer hr
+{
+    margin-top: 0;
 }
 
 #footer-div
@@ -29,5 +45,65 @@ body
 
 #footer-div a
 {
+    margin: 15px 0;
+    font-size: 20px;
+}
 
+#footer-div a:link
+{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+#footer-div a:visited
+{
+    text-decoration: none;
+    color: gray;
+}
+
+#initView > div
+{
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+}
+
+#initView-left
+{
+    width: 40%;
+}
+
+#initView-right
+{
+    width: 60%;
+}
+
+#initView-left input, button
+{
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border-radius: 3px;
+    padding-left: 2px;
+    border: 1px solid gray;
+}
+
+#initView-save
+{
+    margin-top: 40px;
+}
+
+#initView-left h4
+{
+    text-align: center;
+    margin: 5px;
+}
+
+#initView img
+{
+    width: auto;
+    height: 600px;
 }

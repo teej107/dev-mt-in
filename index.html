@@ -10,7 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
     <script src="js/app.js"></script>
     <script src="js/mainController.js"></script>
-    <script src="js/config.js"></script>
 </head>
 
 <body ng-controller="mainController">
@@ -21,13 +20,32 @@
         <img src="images/Icons/Ham.svg">
     </div>
 </header>
-<ng-view>
-</ng-view>
+<div id="initView" ng-show="currentView === 'initView'">
+    <div id="initView-left">
+        <h4>Welcome to <a>DevMountain</a> Social</h4>
+        <h4>Add Some Info So Friends Can Find You</h4>
+        <input id="initView-name" placeholder="Full Name">
+        <input id="initView-tagline" placeholder="Tagline">
+        <input id="initView-profileimg" placeholder="Profile Image Url">
+        <input id="initView-bio" placeholder="Bio">
+        <button id="initView-save">Save Changes</button>
+    </div>
+    <div id="initView-right">
+        <img src="images/TextStyles.jpg">
+    </div>
+</div>
+<div id="friendsView" ng-show="currentView === 'friendsView'">
+    <p>Friends</p>
+</div>
+<div id="findView" ng-show="currentView === 'findView'">
+    <p>Find</p>
+</div>
 <footer>
+    <hr>
     <div id="footer-div">
-        <a>View Friends</a>
-        <a>Find Friends</a>
-        <a>Update Profile</a>
+        <a href="" ng-click="switchView($event, 'friendsView')">View Friends</a>
+        <a href="" ng-click="switchView($event, 'findView')">Find Friends</a>
+        <a href="" ng-click="switchView($event, 'initView')">Update Profile</a>
     </div>
 </footer>
 </body>
