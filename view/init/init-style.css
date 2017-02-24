@@ -1,0 +1,47 @@
+#initView > div
+{
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#initView-left
+{
+    width: 40%;
+    float: left;
+}
+
+#initView-right
+{
+    width: 60%;
+    float: right;
+}
+
+#initView-left input, button
+{
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border-radius: 3px;
+    padding-left: 2px;
+    border: 1px solid gray;
+}
+
+#initView-save
+{
+    margin-top: 40px;
+}
+
+#initView-left h4
+{
+    text-align: center;
+    margin: 5px;
+}
+
+#initView img
+{
+    width: 99%;
+    display: block;
+    margin: 0 auto;
+}

@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevMtin</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="view/init/init-style.css">
+    <link rel="stylesheet" type="text/css" href="view/landing/landing-style.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="js/util.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/mainController.js"></script>
+    <script src="view/init/init-controller.js"></script>
+    <script src="view/landing/landing-controller.js"></script>
 </head>
 
-<body ng-controller="mainController">
+<body>
 <header>
     <div id="header-div">
         <img src="images/Icons/Search.svg">
@@ -20,37 +25,13 @@
         <img src="images/Icons/Ham.svg">
     </div>
 </header>
-<div id="initView" ng-show="currentView === 'initView'">
-    <div id="initView-left">
-        <h4>Welcome to <a>DevMountain</a> Social</h4>
-        <h4>Add Some Info So Friends Can Find You</h4>
-        <input ng-model="name" placeholder="Full Name">
-        <input ng-model="tagline" placeholder="Tagline">
-        <input ng-model="profileUrl" placeholder="Profile Image Url">
-        <input ng-model="bio" placeholder="Bio">
-        <button id="initView-save" ng-click="createUser()">Save Changes</button>
-    </div>
-    <div id="initView-right">
-        <img src="images/TextStyles.jpg">
-    </div>
-</div>
-<div id="friendsView" ng-show="currentView === 'friendsView'">
-    <p>Friends</p>
-</div>
-<div id="findView" ng-show="currentView === 'findView'">
-    <p>Find</p>
-</div>
-<div id="landingView" ng-show="currentView ==='landingView'">
-    <h1>{{ name }}</h1>
-    <h4>{{ tagline }}</h4>
-    <p>{{ bio }}</p>
-</div>
+<ui-view></ui-view>
 <footer>
     <hr>
     <div id="footer-div">
-        <a href="" ng-click="switchView($event.target, 'friendsView')">View Friends</a>
-        <a href="" ng-click="switchView($event.target, 'findView')">Find Friends</a>
-        <a href="" ng-click="switchView($event.target, 'initView')">Update Profile</a>
+        <a ui-sref="friends">View Friends</a>
+        <a ui-sref="find">Find Friends</a>
+        <a ui-sref="landing">Update Profile</a>
     </div>
 </footer>
 </body>

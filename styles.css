@@ -12,6 +12,7 @@ html
 body
 {
     width: 60%;
+    max-width: 900px;
     height: calc(100% - 80px);
     margin: 0 auto;
 }
@@ -27,8 +28,9 @@ footer
     position: fixed;
     bottom: 0;
     width: inherit;
+    max-width: inherit;
     height: 80px;
-    margin: inherit;
+    margin: 0 auto;
     background-color: white;
 }
 
@@ -60,50 +62,4 @@ footer hr
 {
     text-decoration: none;
     color: gray;
-}
-
-#initView > div
-{
-    box-sizing: border-box;
-    float: left;
-    padding: 10px;
-}
-
-#initView-left
-{
-    width: 40%;
-}
-
-#initView-right
-{
-    width: 60%;
-}
-
-#initView-left input, button
-{
-    height: 40px;
-    width: 100%;
-    font-size: 20px;
-    box-sizing: border-box;
-    margin: 10px 0;
-    border-radius: 3px;
-    padding-left: 2px;
-    border: 1px solid gray;
-}
-
-#initView-save
-{
-    margin-top: 40px;
-}
-
-#initView-left h4
-{
-    text-align: center;
-    margin: 5px;
-}
-
-#initView img
-{
-    width: auto;
-    height: 600px;
 }
