@@ -1,47 +1,43 @@
-#initView > div
+.basic-input
 {
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-#initView-left
-{
-    width: 40%;
-    float: left;
-}
-
-#initView-right
-{
-    width: 60%;
-    float: right;
-}
-
-#initView-left input, button
-{
+    display: block;
+    margin: 10px auto;
+    width: 90%;
     height: 40px;
-    width: 100%;
-    font-size: 20px;
-    box-sizing: border-box;
-    margin: 10px 0;
-    border-radius: 3px;
-    padding-left: 2px;
+    border-radius: 5px;
     border: 1px solid gray;
+    font-size: 20px;
+    outline: none;
 }
 
-#initView-save
+.input:focus
 {
-    margin-top: 40px;
+    box-shadow: 0 0 5px 2px cornflowerblue;
+    border-color: transparent;
 }
 
-#initView-left h4
+.input:nth-child(6)
 {
-    text-align: center;
-    margin: 5px;
+    height: 150px;
 }
 
-#initView img
+#save-btn
 {
-    width: 99%;
+    background-color: #C6E1E6;
+}
+
+#save-btn:hover
+{
+    background-color: powderblue;
+}
+
+#save-btn:active
+{
+    background-color: #a2d1d7;
+}
+
+img
+{
     display: block;
     margin: 0 auto;
 }

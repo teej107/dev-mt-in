@@ -63,3 +63,23 @@ footer hr
     text-decoration: none;
     color: gray;
 }
+
+ui-view
+{
+    display: flex;
+    /*height: calc(100% - 80px);*/
+}
+
+#left-div
+{
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+}
+
+#right-div
+{
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+}
