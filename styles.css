@@ -64,6 +64,11 @@ footer hr
     color: gray;
 }
 
+.active-page
+{
+    text-decoration: underline;
+}
+
 ui-view
 {
     display: flex;
@@ -72,6 +77,7 @@ ui-view
 
 #left-div
 {
+    position: relative;
     box-sizing: border-box;
     width: 40%;
     height: 100%;
@@ -79,6 +85,7 @@ ui-view
 
 #right-div
 {
+    position: relative;
     box-sizing: border-box;
     width: 60%;
     height: 100%;

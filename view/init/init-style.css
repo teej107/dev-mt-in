@@ -1,4 +1,10 @@
-.basic-input
+.text-header
+{
+    font-size: 18px;
+    text-align: center;
+}
+
+.init-basic-input
 {
     display: block;
     margin: 10px auto;
@@ -7,37 +13,45 @@
     border-radius: 5px;
     border: 1px solid gray;
     font-size: 20px;
+    padding-left: 5px;
     outline: none;
 }
 
-.input:focus
+.text-input:focus
 {
     box-shadow: 0 0 5px 2px cornflowerblue;
     border-color: transparent;
 }
 
-.input:nth-child(6)
+.text-input:nth-child(6)
 {
-    height: 150px;
+    padding-bottom: 150px;
+    resize: vertical;
 }
 
 #save-btn
 {
-    background-color: #C6E1E6;
+    background-color: #dcdcdc;
+    padding: 0;
 }
 
 #save-btn:hover
 {
-    background-color: powderblue;
+    background-color: #c8c8c8;
 }
 
 #save-btn:active
 {
-    background-color: #a2d1d7;
+    background-color: #b4b4b4;
 }
 
-img
+#init-img
 {
     display: block;
-    margin: 0 auto;
+    margin: auto auto;
+}
+
+#button-div
+{
+    position: relative;
 }

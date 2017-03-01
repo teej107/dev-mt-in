@@ -1,12 +1,12 @@
 <div id="left-div">
-    <h4>Welcome to <a>DevMountain</a> Social</h4>
-    <h4>Add Some Info So Friends Can Find You</h4>
-    <input ng-model="name" placeholder="Full Name" class="basic-input input">
-    <input ng-model="tagline" placeholder="Tagline" class="basic-input input">
-    <input ng-model="profileUrl" placeholder="Profile Image Url" class="basic-input input">
-    <input ng-model="bio" placeholder="Bio" class="basic-input input">
-    <button ng-click="createUser()" id="save-btn" class="basic-input">Save Changes</button>
+    <h4 class="text-header">Welcome to <a>DevMountain</a> Social</h4>
+    <h4 class="text-header">Add Some Info So Friends Can Find You</h4>
+    <input ng-model="name" placeholder="Full Name" class="init-basic-input text-input">
+    <input ng-model="tagline" placeholder="Tagline" class="init-basic-input text-input">
+    <input ng-model="profileUrl" placeholder="Profile Image Url" class="init-basic-input text-input">
+    <textarea ng-model="bio" placeholder="Bio" class="init-basic-input text-input"></textarea>
+    <button ng-click="createUser()" id="save-btn" class="init-basic-input">Save Changes</button>
 </div>
 <div id="right-div">
-    <img src="http://placehold.it/400x600">
+    <img id="init-img" src="http://placehold.it/400x600">
 </div>

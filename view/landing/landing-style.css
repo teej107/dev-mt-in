@@ -1,0 +1,15 @@
+#landing-first-name
+{
+    text-align: left;
+}
+
+#landing-last-name
+{
+    text-align: right;
+}
+
+.text-block
+{
+    display: block;
+    width: 100%;
+}
