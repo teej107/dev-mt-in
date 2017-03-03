@@ -3,8 +3,10 @@
  */
 app.controller('initController', function ($scope, $rootScope, $state)
 {
-    if (sessionStorage.getItem('user'))
+    var user = getSessionUser();
+    if (user)
     {
+        $rootScope.user = user;
         $state.go('landing');
     }
 
@@ -17,6 +19,7 @@ app.controller('initController', function ($scope, $rootScope, $state)
         else
         {
             $rootScope.user = new User($scope.name, $scope.tagline, $scope.profileUrl, $scope.bio);
+            $rootScope.user.setSessionUser();
             $state.go('landing');
         }
     }
