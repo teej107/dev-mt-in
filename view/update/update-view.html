@@ -1,0 +1,16 @@
+<div id="left-div">
+    <h1 id="profile-first-name" class="text-block profile-name">{{ getUser().getFirstName() }}</h1>
+    <h1 id="profile-last-name" class="text-block profile-name">{{ getUser().getLastName() }}</h1>
+    <h4 class="text-block profile-tagline">{{ getUser().tagline }}</h4>
+    <p class="text-block profile-bio">{{ getUser().bio }}</p>
+</div>
+<div id="right-div">
+    <h2 id="update-title" class="update-input update-shadow">Profile Settings</h2>
+    <div id="update-input-div" class="update-input update-shadow">
+        <input ng-model="name" placeholder="Full Name" class="basic-input text-input">
+        <input ng-model="tagline" placeholder="Tagline" class="basic-input text-input">
+        <input ng-model="profileUrl" placeholder="Profile Image Url" class="basic-input text-input">
+        <textarea id="bio" ng-model="bio" placeholder="Bio" class="basic-input text-input"></textarea>
+    </div>
+    <button id="update-save-btn" class="basic-input update-shadow" ng-click="saveChanges()">Save Changes</button>
+</div>

@@ -1,51 +1,27 @@
-.text-header
+.init-text-header
 {
     font-size: 18px;
     text-align: center;
 }
 
-.init-basic-input
+#init-save-btn
 {
-    display: block;
-    margin: 10px auto;
-    width: 90%;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    font-size: 20px;
-    padding-left: 5px;
-    outline: none;
-}
-
-.text-input:focus
-{
-    box-shadow: 0 0 5px 2px cornflowerblue;
+    background-color: #74fdf3;
+    color: #B6B6B6;
     border-color: transparent;
-}
-
-.text-input:nth-child(6)
-{
-    padding-bottom: 150px;
-    resize: vertical;
-}
-
-#save-btn
-{
-    background-color: #dcdcdc;
+    box-shadow: 0 0 2px 1px #00ffe9;
     padding: 0;
+    font-weight: bold;
 }
 
-#save-btn:hover
+#init-save-btn:hover
 {
-    background-color: #c8c8c8;
+    background-color: #00ffe9;
 }
 
-#save-btn:active
+#init-save-btn:active
 {
     background-color: #b4b4b4;
-}
-
-#button-div
-{
-    position: relative;
+    box-shadow: 0 0 2px 1px #b4b4b4;
+    color: #74fdf3;
 }

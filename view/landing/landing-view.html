@@ -1,6 +1,9 @@
 <div id="left-div">
-    <h1 id="landing-first-name" class="text-block landing-name landing-name-space">{{ firstName }}</h1>
-    <h1 id="landing-last-name" class="text-block landing-name">{{ lastName }}</h1>
-    <h4 class="text-block landing-tagline">{{ user.tagline }}</h4>
-    <p class="text-block landing-bio">{{ user.bio }}</p>
+    <h1 id="profile-first-name" class="text-block profile-name">{{ getUser().getFirstName() }}</h1>
+    <h1 id="profile-last-name" class="text-block profile-name">{{ getUser().getLastName() }}</h1>
+    <h4 class="text-block profile-tagline">{{ getUser().tagline }}</h4>
+    <p class="text-block profile-bio">{{ getUser().bio }}</p>
+</div>
+<div id="right-div">
+    <img ng-src="{{ getProfileUrl() }}">
 </div>

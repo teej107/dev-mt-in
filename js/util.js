@@ -17,12 +17,26 @@ function User(name, tagline, profileUrl, bio)
     this.tagline = tagline;
     this.profileUrl = profileUrl;
     this.bio = bio;
+
+    this.getFirstName = function ()
+    {
+        return name.split(' ')[0];
+    };
+    this.getLastName = function ()
+    {
+        return name.split(' ')[1];
+    };
 }
 
 User.prototype.setSessionUser = function ()
 {
     sessionStorage.setItem('user', JSON.stringify(this));
 };
+
+function clearSessionUser()
+{
+    sessionStorage.removeItem('user');
+}
 
 function getSessionUser()
 {
@@ -31,6 +45,5 @@ function getSessionUser()
         return null;
 
     var user = JSON.parse(userStr);
-    user.prototype = User.prototype;
-    return user;
+    return new User(user.name, user.tagline, user.profileUrl, user.bio);
 }

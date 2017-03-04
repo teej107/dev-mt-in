@@ -1,12 +1,12 @@
 /**
  * Created by tanner on 2/23/17.
  */
-app.controller('initController', function ($scope, $rootScope, $state)
+app.controller('initController', function ($scope, appService, $state)
 {
     var user = getSessionUser();
     if (user)
     {
-        $rootScope.user = user;
+        appService.setMainUser(user);
         $state.go('landing');
     }
 
@@ -18,8 +18,7 @@ app.controller('initController', function ($scope, $rootScope, $state)
         }
         else
         {
-            $rootScope.user = new User($scope.name, $scope.tagline, $scope.profileUrl, $scope.bio);
-            $rootScope.user.setSessionUser();
+            appService.setMainUser(new User($scope.name, $scope.tagline, $scope.profileUrl, $scope.bio)).setSessionUser();
             $state.go('landing');
         }
     }

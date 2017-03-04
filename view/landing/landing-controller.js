@@ -1,16 +1,20 @@
-/**
- * Created by tanner on 2/23/17.
- */
-app.controller('landingController', function ($scope, $rootScope, $state)
+app.controller('landingController', function ($scope, $state, appService)
 {
-    $scope.user = $rootScope.user;
-    if (!$scope.user)
+    $scope.getUser = function ()
+    {
+        return appService.getMainUser();
+    };
+    if (!appService.getMainUser())
     {
         $state.go('init');
         return;
     }
 
-    var name = $scope.user.name.split(' ');
-    $scope.firstName = name[0];
-    $scope.lastName = name[1];
+    $scope.getProfileUrl = function ()
+    {
+        if(appService.getMainUser().profileUrl)
+            return appService.getMainUser().profileUrl;
+
+        return 'images/img-placeholder.png';
+    }
 });

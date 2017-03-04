@@ -9,7 +9,8 @@ app.config(function ($stateProvider, $urlRouterProvider)
         .state('init', new Route('/', 'init/init-view.html', 'initController'))
         .state('find', new Route('/find', 'find/find-view.html'))
         .state('friends', new Route('/friends', 'friends/friends-view.html'))
-        .state('landing', new Route('/landing', 'landing/landing-view.html', 'landingController'));
+        .state('landing', new Route('/landing', 'landing/landing-view.html', 'landingController'))
+        .state('update', new Route('/update', 'update/update-view.html', 'updateController'));
 
     $urlRouterProvider.otherwise('/');
 });

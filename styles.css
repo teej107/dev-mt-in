@@ -78,11 +78,15 @@ ui-view
 #right-div img
 {
     display: block;
-    margin: auto auto;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
 }
 
 #left-div
 {
+    margin-top: 30px;
     position: relative;
     box-sizing: border-box;
     width: 40%;
@@ -91,8 +95,67 @@ ui-view
 
 #right-div
 {
+    margin-top: 30px;
     position: relative;
     box-sizing: border-box;
     width: 60%;
     height: 100%;
+}
+
+.basic-input
+{
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 20px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.text-input:focus
+{
+    box-shadow: 0 0 5px 2px cornflowerblue;
+    border-color: transparent;
+}
+
+#bio
+{
+    padding-bottom: 150px;
+    resize: vertical;
+}
+
+#profile-first-name
+{
+    text-align: left;
+}
+
+#profile-last-name
+{
+    text-align: right;
+}
+
+.text-block
+{
+    display: block;
+    width: 100%;
+}
+
+.profile-name
+{
+    font-size: 56px;
+    margin: 0;
+}
+
+.profile-tagline
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+.profile-bio
+{
+    font-size: 16px;
 }
